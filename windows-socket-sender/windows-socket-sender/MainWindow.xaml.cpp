@@ -22,32 +22,8 @@ namespace winrt::windows_socket_sender::implementation
         throw hresult_not_implemented();
     }
 
-    #include <winrt/Windows.Networking.Sockets.h>
-    #include <winrt/Windows.Storage.Streams.h>
-
-    void MainWindow::btnSend_Click(IInspectable const&, RoutedEventArgs const&)
-    {
-        btnSend().Content(box_value(L"Sending"));
-
-        // Create a TCP socket and connect to the server
-        winrt::Windows::Networking::Sockets::StreamSocket socket;
-        winrt::Windows::Foundation::Uri serverUri(L"your_server_address_here");
-        socket.ConnectAsync(serverUri, L"your_port_here").Completed([this](auto const&, auto const&)
-        {
-            // Send data to the server
-            winrt::Windows::Storage::Streams::DataWriter writer(socket.OutputStream());
-            writer.WriteString(L"Your data here");
-            writer.StoreAsync().Completed([this](auto const&, auto const&)
-            {
-                // Update the button content to "Sent" after sending data
-                btnSend().Content(box_value(L"Sent"));
-            });
-        });
-    }
-
-
     void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
-        // myButton().Content(box_value(L"Clicked"));
+        myButton().Content(box_value(L"Clicked"));
     }
 }

@@ -15,8 +15,6 @@ namespace winrt::windows_socket_sender::implementation
         int32_t MyProperty();
         void MyProperty(int32_t value);
 
-    	void btnSend_Click(Windows::Foundation::IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&);
-
         void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
     };
 }
