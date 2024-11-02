@@ -22,8 +22,28 @@ namespace winrt::windows_socket_sender::implementation
         throw hresult_not_implemented();
     }
 
-    void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
+    void MainWindow::myButtonSender(IInspectable const&, RoutedEventArgs const&)
     {
-        myButton().Content(box_value(L"Clicked"));
+		sendButton().Content(box_value(L"Sending.."));
+
+		// if ftp is done sending and has sent via TCP make the button say "Sent"
+
     }
+
+	void MainWindow::connectButton_Click(Windows::Foundation::IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&)
+	{
+		connectButton().Content(box_value(L"Connecting.."));
+
+    	// if TCP connection is successful make the button say "Connected" else "Failed" together with error message
+		if (true)
+		{
+			connectButton().Content(box_value(L"Connected"));
+		}
+		else
+		{
+			connectButton().Content(box_value(L"Failed"));
+		}
+
+
+	}
 }

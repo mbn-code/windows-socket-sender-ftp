@@ -8,7 +8,39 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid x:Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Background="#0d0d11">
+            <TextBlock Text="Main Content Area" FontSize="24" HorizontalAlignment="Center" Margin="10"/>
+        </StackPanel>
+
+        <Border Grid.Column="1" Background="#0a0a0e" Padding="20">
+            <StackPanel>
+                <!-- Connection Section -->
+                <TextBlock Text="Connection" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
+                <TextBox Width="200" Height="40" FontSize="16" x:Name="ipAddress" Text="IP Address" Margin="5"/>
+                <TextBox Width="200" Height="40" FontSize="16" x:Name="username" Text="Username" Margin="5"/>
+                <PasswordBox Width="200" Height="40" FontSize="16" x:Name="password" Margin="5"/>
+                <Button Width="150" Height="50" FontSize="20" x:Name="connectButton" Click="connectButton_Click" BorderThickness="1" BorderBrush="Purple" Margin="5">Connect</Button>
+
+                <!-- File Information Section -->
+                <TextBlock Text="File Information" FontSize="20" FontWeight="Bold" Margin="0,20,0,10" Foreground="White"/>
+                <StackPanel>
+                    <TextBlock Text="File Name:" Foreground="White"/>
+                    <TextBox Width="200" Height="40" FontSize="16" x:Name="fileName" Margin="5"/>
+                    <TextBlock Text="Size:" Foreground="White"/>
+                    <TextBox Width="200" Height="40" FontSize="16" x:Name="fileSize" Margin="5"/>
+                </StackPanel>
+
+                <!-- Sending Information Section -->
+                <TextBlock Text="Send Information" FontSize="20" FontWeight="Bold" Margin="0,20,0,10" Foreground="White"/>
+                <Button Width="150" Height="50" FontSize="20" x:Name="sendButton" Click="myButtonSender" BorderThickness="1" BorderBrush="Purple" Margin="5">Send</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+
 </Window>
