@@ -22,7 +22,7 @@ namespace winrt::windows_socket_sender::implementation
         throw hresult_not_implemented();
     }
 
-    void MainWindow::myButtonSender(IInspectable const&, RoutedEventArgs const&)
+    void MainWindow::FileSenderButton(IInspectable const&, RoutedEventArgs const&)
     {
 		sendButton().Content(box_value(L"Sending.."));
 
@@ -30,7 +30,7 @@ namespace winrt::windows_socket_sender::implementation
 
     }
 
-	void MainWindow::connectButton_Click(Windows::Foundation::IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&)
+	void MainWindow::ConnectButtonFTP(Windows::Foundation::IInspectable const&, Microsoft::UI::Xaml::RoutedEventArgs const&)
 	{
 		connectButton().Content(box_value(L"Connecting.."));
 

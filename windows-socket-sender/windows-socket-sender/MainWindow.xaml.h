@@ -15,9 +15,14 @@ namespace winrt::windows_socket_sender::implementation
         int32_t MyProperty();
         void MyProperty(int32_t value);
 
-		void connectButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        // function definitions for MainWindow.xaml.cpp ---------------------------------------------------------------------------
 
-        void myButtonSender(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+		void ConnectButtonFTP(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+
+        void FileSenderButton(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+
+        // ------------------------------------------------------------------------------------------------------------------------
+
     };
 }
 

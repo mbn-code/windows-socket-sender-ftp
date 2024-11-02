@@ -25,7 +25,7 @@
                 <TextBox Width="200" Height="40" FontSize="16" x:Name="ipAddress" Text="IP Address" Margin="5"/>
                 <TextBox Width="200" Height="40" FontSize="16" x:Name="username" Text="Username" Margin="5"/>
                 <PasswordBox Width="200" Height="40" FontSize="16" x:Name="password" Margin="5"/>
-                <Button Width="150" Height="50" FontSize="20" x:Name="connectButton" Click="connectButton_Click" BorderThickness="1" BorderBrush="Purple" Margin="5">Connect</Button>
+                <Button Width="150" Height="50" FontSize="20" x:Name="connectButton" Click="ConnectButtonFTP" BorderThickness="1" BorderBrush="Purple" Margin="5">Connect</Button>
 
                 <!-- File Information Section -->
                 <TextBlock Text="File Information" FontSize="20" FontWeight="Bold" Margin="0,20,0,10" Foreground="White"/>
@@ -38,7 +38,7 @@
 
                 <!-- Sending Information Section -->
                 <TextBlock Text="Send Information" FontSize="20" FontWeight="Bold" Margin="0,20,0,10" Foreground="White"/>
-                <Button Width="150" Height="50" FontSize="20" x:Name="sendButton" Click="myButtonSender" BorderThickness="1" BorderBrush="Purple" Margin="5">Send</Button>
+                <Button Width="150" Height="50" FontSize="20" x:Name="sendButton" Click="FileSenderButton" BorderThickness="1" BorderBrush="Purple" Margin="5">Send</Button>
             </StackPanel>
         </Border>
     </Grid>
