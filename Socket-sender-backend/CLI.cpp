@@ -31,20 +31,6 @@ void deleteCredentials() {
 }
 
 void CLI::start() {
-    std::string role;
-    std::cout << "Are you a client or server? (client/server): ";
-    std::getline(std::cin, role);
-
-    if (role == "server") {
-        // Server-specific logic here
-        std::cout << "Server mode selected. Implement server logic here." << std::endl;
-        return;
-    }
-    else if (role != "client") {
-        std::cout << "Invalid role. Exiting." << std::endl;
-        return;
-    }
-
     std::string server, username, password;
     bool credentials_loaded = loadCredentials(server, username, password);
 
