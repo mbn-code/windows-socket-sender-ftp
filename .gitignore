@@ -467,3 +467,4 @@ winrt_generated/
 .generated/
 *.winmd
 .cppwinrt/
+
