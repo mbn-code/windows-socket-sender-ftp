@@ -468,3 +468,6 @@ winrt_generated/
 *.winmd
 .cppwinrt/
 
+.credentials.txt
+./credentials.txt
+./Socket-Sender-backend-client/credentials.txt
