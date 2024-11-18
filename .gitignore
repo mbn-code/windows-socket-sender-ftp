@@ -471,3 +471,5 @@ winrt_generated/
 .credentials.txt
 ./credentials.txt
 ./Socket-Sender-backend-client/credentials.txt
+Socket-sender-backend-client/credentials.txt
+Socket-sender-backend-client/test.txt
